@@ -28,6 +28,10 @@ function App() {
         >
           Count is {count}
         </button>
+
+        <div className="progress" style={{ maxWidth: 320 }}>
+          <div className="fill" style={{ width: `${Math.min(count * 10, 100)}%` }} />
+        </div>
       </section>
 
       <div className="ticks"></div>
