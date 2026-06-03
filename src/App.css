@@ -1,6 +1,6 @@
 /* Bouton signature « Jubilee » — or plein, relief doré */
 .counter {
-  font-size: 16px;
+  font-size: var(--fs-button);
   font-weight: 600;
   padding: 10px 22px;
   border-radius: 8px;

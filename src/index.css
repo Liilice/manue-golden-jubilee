@@ -48,7 +48,17 @@
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
-  font: 18px/145% var(--sans);
+  /* ==========================================================
+     ✍️ TYPOGRAPHIE — tailles mobile-first
+     Valeurs par défaut = 📱 Mobile.
+     Surchargées plus bas pour 📑 Tablette (≥768px) et 💻 Desktop (≥1024px).
+     ========================================================== */
+  --fs-h1: 32px;      /* titre principal */
+  --fs-h2: 24px;      /* sous-titre */
+  --fs-body: 16px;    /* texte de corps */
+  --fs-button: 16px;  /* boutons */
+
+  font: var(--fs-body)/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light;
   color: var(--text);
@@ -57,9 +67,25 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
+/* 📑 Tablette */
+@media (min-width: 768px) {
+  :root {
+    --fs-h1: 40px;
+    --fs-h2: 28px;
+    --fs-body: 18px;
+    --fs-button: 18px;
+  }
+}
+
+/* 💻 Desktop */
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 48px;
+    --fs-h2: 32px;
+    --fs-body: 20px;
+    --fs-button: 18px;
   }
 }
 
@@ -87,22 +113,18 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
+  font-size: var(--fs-h1);
+  letter-spacing: -1.5px;
+  margin: 20px 0;
+  @media (min-width: 1024px) {
+    margin: 32px 0;
   }
 }
 h2 {
-  font-size: 24px;
+  font-size: var(--fs-h2);
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
 }
 p {
   margin: 0;
