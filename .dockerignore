@@ -1,0 +1,20 @@
+# Dépendances : réinstallées dans l'image via `npm install`.
+# (Indispensable : évite le conflit pnpm/npm « cannot replace to directory ... with file »)
+node_modules
+
+# Build & cache
+dist
+.vite
+
+# Git & éditeur
+.git
+.gitignore
+.vscode
+.idea
+
+# Logs & divers
+npm-debug.log*
+pnpm-debug.log*
+.DS_Store
+Dockerfile
+.dockerignore
