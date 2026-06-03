@@ -1,16 +1,7 @@
 import { useNavigate } from "react-router";
-import {
-  Sparkles,
-  HeartHandshake,
-  RotateCcw,
-  Gift as GiftIcon,
-} from "lucide-react";
+import { Sparkles, HeartHandshake, RotateCcw } from "lucide-react";
 import Confetti from "./Confetti";
 import Staycation from "../assets/staycation.png";
-
-// Image du cadeau (collier). Remplace l'URL par ton propre visuel si besoin.
-const GIFT_IMAGE =
-  "https://lh3.googleusercontent.com/aida-public/AB6AXuBkvk6_ySCflSEV15WdB3UJ2IqM6bgQdoRG250lmJxxFUKSZKk3T0f20cOvcowtMEOoX8hsU4jiHffJ4XIlDdxOrEeKSLZOeLJ-_DjaVYV17rcUuNN2qKOpSJ8Iq675PjeOITwltmk2rCHnesv6Hm0sEro7gS_jwSuIUF1QsvhEL54JAYTDxE0oAzCW7Cr4gqdCvT65ffgBVJWMgPY-7IPKwy_7VWRW_XRgS9I9GJLGV_2_TMN3uFAfyr4-ARXMJxVw66erLwviM3on";
 
 const Gift = () => {
   const navigate = useNavigate();
