@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /* ============================================================
-   🎨 PALETTE DE COULEURS — Golden Jubilee
+  PALETTE DE COULEURS — Golden Jubilee
    Modifiez les valeurs ici pour changer toutes les couleurs.
    Disponibles partout :
      - en classe Tailwind : bg-jubilee, text-gold-dark, ...
@@ -9,22 +9,22 @@
    ============================================================ */
 @theme {
   /* Arrière-plan */
-  --color-ivory: #faf9f6;          /* fond principal (blanc cassé doux) */
-  --color-card: #ffffff;           /* conteneurs & cartes (blanc pur) */
+  --color-ivory: #faf9f6; /* fond principal (blanc cassé doux) */
+  --color-card: #ffffff; /* conteneurs & cartes (blanc pur) */
 
   /* Texte */
-  --color-gold-dark: #6d5d05;      /* titres & accents (or sombre/bronze) */
-  --color-ink: #4a4a4a;            /* texte de corps (gris anthracite doux) */
-  --color-gold-mid: #8c730a;       /* messages d'affection (or moyen) */
+  --color-gold-dark: #6d5d05; /* titres & accents (or sombre/bronze) */
+  --color-ink: #4a4a4a; /* texte de corps (gris anthracite doux) */
+  --color-gold-mid: #8c730a; /* messages d'affection (or moyen) */
 
   /* Boutons */
-  --color-jubilee: #d4af37;        /* couleur signature — fond des boutons */
-  --color-jubilee-text: #ffffff;   /* texte des boutons */
+  --color-jubilee: #d4af37; /* couleur signature — fond des boutons */
+  --color-jubilee-text: #ffffff; /* texte des boutons */
 
   /* Éléments décoratifs */
   --color-track-inactive: #dbdad7; /* barre de progression (inactif) */
-  --color-confetti-rose: #fce4ec;  /* confettis — rose poudré */
-  --color-confetti-mint: #e8f5e9;  /* confettis — menthe douce */
+  --color-confetti-rose: #fce4ec; /* confettis — rose poudré */
+  --color-confetti-mint: #e8f5e9; /* confettis — menthe douce */
 }
 
 :root {
@@ -40,25 +40,24 @@
   --social-bg: rgba(212, 175, 55, 0.08);
 
   /* Ombre dorée pour donner du relief aux cartes/boutons */
-  --shadow:
-    rgba(212, 175, 55, 0.3) 0 10px 15px -3px,
+  --shadow: rgba(212, 175, 55, 0.3) 0 10px 15px -3px,
     rgba(212, 175, 55, 0.15) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
   /* ==========================================================
-     ✍️ TYPOGRAPHIE — tailles mobile-first
-     Valeurs par défaut = 📱 Mobile.
-     Surchargées plus bas pour 📑 Tablette (≥768px) et 💻 Desktop (≥1024px).
+     TYPOGRAPHIE — tailles mobile-first
+     Valeurs par défaut = Mobile.
+     Surchargées plus bas pour Tablette (≥768px) et Desktop (≥1024px).
      ========================================================== */
-  --fs-h1: 32px;      /* titre principal */
-  --fs-h2: 24px;      /* sous-titre */
-  --fs-body: 16px;    /* texte de corps */
-  --fs-button: 16px;  /* boutons */
+  --fs-h1: 32px; /* titre principal */
+  --fs-h2: 24px; /* sous-titre */
+  --fs-body: 16px; /* texte de corps */
+  --fs-button: 16px; /* boutons */
 
-  font: var(--fs-body)/145% var(--sans);
+  font: var(--fs-body) / 145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light;
   color: var(--text);
@@ -90,15 +89,15 @@
 }
 
 #root {
-  width: 1126px;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
@@ -113,18 +112,22 @@ h2 {
 }
 
 h1 {
-  font-size: var(--fs-h1);
-  letter-spacing: -1.5px;
-  margin: 20px 0;
-  @media (min-width: 1024px) {
-    margin: 32px 0;
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
   }
 }
 h2 {
-  font-size: var(--fs-h2);
+  font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
 }
 p {
   margin: 0;
@@ -143,4 +146,76 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    var(--color-jubilee) 0%,
+    #f4d03f 50%,
+    var(--color-jubilee) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.floating-gift {
+  animation: float 6s ease-in-out infinite;
+}
+
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none; /* laisse passer les clics vers le bouton/contenu */
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  top: -5vh;
+  border-radius: 50%;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, -10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--drift, 0), 110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .floating-gift {
+    animation: none;
+  }
+  .confetti {
+    display: none;
+  }
 }
