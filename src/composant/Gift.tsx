@@ -34,11 +34,13 @@ const Gift = () => {
             <Sparkles className="text-gold-dark mb-4" size={44} />
             <h2 className="mb-4">Un mot de Loulou</h2>
             <p className="italic text-gold-mid">
-              "Joyeux anniversaire Maman. Aujourd'hui c'est ta journée, et je
-              voulais juste te dire à quel point je suis fier de t'avoir comme
-              mère. Merci pour tout ce que tu fais, pour ton amour et ta
-              présence de chaque instant. Je t'aime très fort. Profite à fond de
-              ton jour, tu le mérites plus que personne."
+              "Joyeux anniversaire à la meilleure maman du monde, la mienne !
+              Merci pour tout ce que tu as fait, tu fais et tu feras pour moi.
+              Merci d’être présente pour nous dans les bons, comme dans les
+              mauvais moments. C’est maintenant l’heure pour toi de te détendre,
+              après 50 ans d’effort. Je te souhaite tout le bonheur du monde, tu
+              le mérites sincèrement. Love You ! Ton petit chou des bois des
+              îles, Loulou."
             </p>
           </article>
 
